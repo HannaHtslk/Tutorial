@@ -110,21 +110,178 @@
 
 // console.log(checkPasswordLength('blabla', 16));
 
-// Функція checkURL(url) приймає один параметр:
 
-// url - рядок, що містить URL-адресу. URL може містити шлях до ресурсу, параметри запиту тощо.
-// Доповни код функції таким чином, щоб:
-
-// Вона перевіряла наявність параметрів запиту в URL-адресі.
-// Якщо URL містить параметри запиту, функція повертала новий рядок, який містить URL-адресу без параметрів.
-// В іншому випадку функція повертала незмінний рядок.
 
 
 // Використовуючи метод .indexOf(), знайти і вивести в консоль позицію, 
 // на якій знаходиться пробіл між ім'ям та прізвищем
 
-const string = 'Daniel Redkliff'
 
-console.log(string.indexOf(' '));
-console.log(string.startsWith('D'));
-console.log(string.includes('Dan'));
+// const string = 'Daniel Redkliff'
+
+// console.log(string.indexOf(' '));
+// console.log(string.startsWith('D'));
+// console.log(string.includes('Dan'));
+
+
+// ? Напишіть код, який запитуватиме:
+// ? 'Яка «офіційна» назва JavaScript?'
+// ? Якщо користувач вводить ECMAScript,
+// ? то показати: «Вірно!», інакше – відобразити: «Не знаєте? ECMAScript!»
+// */
+
+// const answer = 'ECMAScript'.toLowerCase();
+// const userInput = prompt('Яка «офіційна» назва JavaScript?').toLowerCase().trim();
+// switch (userInput) {
+//     case answer:
+//         console.log('Вірно!');
+//         break;
+//     default:
+//         console.log('Не знаєте? ECMAScript!');
+        
+// }
+/*
+? Форматування посилання (endsWith)
+?
+? Напиши скрипт який перевіряє чи закінчується значення
+?  змінної link символом /. Якщо ні, додай до кінця
+?  значення link цей символ.
+? Використовуй конструкцію if...else.
+*/
+
+// let link = 'https://www.edu.goit.global/uk/learn/21769527/18936918/19420981/homework/';
+
+// if (!link.endsWith('/')) {
+//     link += '/';
+  
+// }
+//   console.log(link);
+
+
+/*
+? Форматування посилання (includes та логічне «І»)
+? Напиши скрипт який перевіряє чи закінчується значення
+? змінної link символом /. Якщо ні, додай до кінця
+? значення link цей символ, але тільки в тому випадку,
+? якщо в link є підрядок "my-site".
+? Використовуй конструкцію if...else або тернарний оператор.
+*/
+
+// let link = 'https://www.edu.goit.global/uk/my-sitelearn/21769527/18936918/19420981/homework';
+
+// if (!link.endsWith('/') && link.includes('my-site')) {
+//     link += '/';
+// }
+
+// console.log(link);
+
+/*
+? За допомогою циклу for виведіть парні числа від 2 до 10.
+*/
+// for (let i = 2; i <= 10; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i);
+//     }
+// }
+
+/*
+? Напиши цикл for, який виводить у консоль браузера
+? числа за зростанням від a до b, але тільки якщо число кратне 5.
+*/
+// const a = 10;
+// const b = 200;
+// for (let i = a; i <= b; i++) {
+//     if (i % 5 === 0) {
+//         console.log(i)
+//     }
+// }
+
+/*
+? Напиши скрипт, який підраховує суму всіх парних чисел,
+? які входять в діапазон чисел у змінних від min до max.
+? Наприклад, якщо min=0 и max=5, то діапазон 0-5, і в ньому два парних числа - 2 і 4, їх сума 6.
+*/
+
+// const min = 3;
+// const max = 89;
+
+// let total = 0;
+// for (let i = min; i <= max; i++) {
+
+// }
+
+/*
+? Напишіть програму, яка виводить через console.log усі числа від 1 до 100, з трьома винятками.
+? Для чисел, що націло діляться на 3, вона повинна виводити 'Fizz',
+? а для чисел, що діляться на 5 – 'Buzz'.
+? Для чисел які кратні 3 та 5 = 'FizzBuzz'
+*/
+
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log('FizzBuzz');
+//     } else if (i % 3 === 0) {
+//         console.log('Fizz');
+//     } else if (i % 5 === 0) {
+//         console.log('Buzz');
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+// Вивести на екран таблицю множення числа 7.
+// for (let i = 1; i <= 10; i++) {
+//     const result = i * 7;
+//     console.log(result);
+// }
+    
+// Порахуйте суму чисел від 12 до 27
+// let total = 0;
+// for (let i = 12; i <= 27; i++) {
+//     total += i;
+//     console.log(total);
+// }
+
+// Знайдіть добуток непарних числен від 3 до 9
+
+// let total = 1;
+
+// for (let i = 3; i <= 9; i++) {
+//     if (i % 2 !== 0) {
+//         total = total * i;
+//         console.log(total);
+//     }
+// }
+
+// Створити змінну, яка містить рядок з вашим ім'ям. Використовуючи метод .replace(), 
+// замінити першу літеру вашого імені на символ "@" та вивести результат в консоль.
+
+// const userName = 'Anna'.replace('A', '@');
+
+// console.log(userName);
+
+
+// Знайдіть число 49  у проміжку чисел від 1 до 100 та вийдіть з циклу.
+
+for (let i = 1; i <= 100; i++) {
+    if (i === 49) {
+        console.log(i);
+            break;
+    }
+
+}
+
+
+// Напиши скрипт який підраховує загальну вартість покупки.
+// Кількість товарів зберігається в змінній goods.
+// Ціна кожного товару це випадкове число від 500 до 5000.
+//  Записати суму в змінну totalPrice і вивести в консолі. Math.floor(Math.random() * (max - min + 1)) + min
+
+// let goods = 10;
+// let totalPrice = 0;
+
+// for (let i = 0; i < goods; i++) {
+//     let price = Math.floor(Math.random() * (5000 - 500 + 1)) + 500;
+//     totalPrice += price;
+// }
+// console.log(totalPrice);
