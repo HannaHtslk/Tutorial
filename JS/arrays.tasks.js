@@ -78,3 +78,12 @@ const string = 'Welcome to the future';
 
 // const values = [17, -10, 94, -30, 1, 23, -20];
 
+function getEvenNumbers(start, end) {
+let total = 0;
+  const array = [];
+  array[0] = start;
+    array[1] = end;
+
+    
+}
+
