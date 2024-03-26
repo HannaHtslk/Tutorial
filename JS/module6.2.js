@@ -136,3 +136,103 @@
 // const john = new Employee("John", 32, "programmer");
 // console.log(john.getInfo()); // "John is a programmer and is 32 years old"
 
+
+/*
+? Фільтрація за діапазоном
+?
+? Напишіть функцію filterRange(numbers, a, b), яка приймає масив numbers, 
+? шукає в ньому елементи більші-рівні min та менші-рівні max і віддає масив цих елементів.
+*/
+
+// const filterRange = (numbers, min, max) => {
+//     return numbers.filter(num => {
+//         return num >= min && num <= max;
+//     });
+    
+// }
+// console.log(filterRange([3, 6, 5, 1], 2, 10))
+
+//? Відфільтруйте масив на унікальні значення.
+
+// const users = ['Andre', 'Lester', 'Andre', 'Lester', 'Louisa', 'Alex'];
+// const filteredUser = users.filter((username, idx, arr) => { 
+//     return arr.indexOf(username) === idx;
+// })
+
+// const users = ['Andre', 'Lester', 'Andre', 'Lester', 'Louisa', 'Alex'];
+// const filteredUser = [];
+
+// users.forEach(username => {
+//     if (!filteredUser.includes(username)) {
+//         filteredUser.push(username)
+//     }
+// })
+
+// console.log(users);
+// console.log(filteredUser);
+
+//? Відфільтруйте масив з користувачами на унікальні значення.
+
+// const allUsers = [
+//   { firstName: 'Herbert', age: 25 },
+//   { firstName: 'Herbert', age: 25 },
+//   { firstName: 'Todd', age: 30 },
+//   { firstName: 'Todd', age: 30 },
+//   { firstName: 'Lida', age: 29 },
+// ];
+// const filtredUsers = [];
+
+/*
+? Відсортувати користувачів за віком
+? 
+? Напишіть функцію sortByAge(users), яка приймає масив обʼєктів з властивістю age і сортує їх по ньому.
+*/
+
+// Повна версія
+// const allUsers = [
+//   { firstName: 'Herbert', age: 25 },
+//   { firstName: 'Todd', age: 30 },
+//   { firstName: 'Lida', age: 29 },
+// ];
+
+
+
+/*
+? Вирахувати середній вік
+? Напишіть функцію getAverageAge(users), яка приймає масив об’єктів 
+? з властивістю age та повертає середній вік.
+*/
+
+// Повна версія
+// const allUsers = [
+//   { firstName: 'Herbert', age: 25 },
+//   { firstName: 'Todd', age: 30 },
+//   { firstName: 'Lida', age: 29 },
+// ];
+
+
+/*
+? Напиши клас Storage який створює об'єкти для керування складом товарів.
+? При виклику отримуватиме один аргумент - початковий масив товарів і
+? записуватиме його у властивість items.
+?
+? Додай методи класу:
+? - getItems() - повертає масив товарів.
+? - addItem(item) - отримує новий товар і додає його до поточних.
+? - removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
+ */
+
+
+/*
+? Напиши клас Notes, який управляє колекцією нотаток у властивості items.
+? Нотатка це об'єкт із властивостями text та priority.
+? Додай класу статичну властивість Priority, в якій зберігатиметься об'єкт із пріоритетами.
+?
+? {
+? LOW: 'low',
+? NORMAL: 'normal',
+? HIGH: 'high'
+? }
+?
+? Додай методи addNote(note), removeNote(text) та updatePriority(text, newPriority).
+*/
