@@ -41,8 +41,38 @@
 ? Оголоси приватні властивості #login та #email, доступ до яких зроби через
 ? гетер та сетер login та email.
  */
+// class User {
+//     #login;
+//     #email;
+//     constructor(login, email) {
+//         this.#login = login;
+//         this.#email = email;
+//     }
 
+//     get login() {
+//         return this.#login
+//     }
+//     set login(newLogin) {
+//         this.#login = newLogin;
+//     }
 
+//     get email() {
+//         return this.#email;
+//     }
+//     set email(newEmail) {
+//         this.#email = newEmail;
+//     }
+// }
+
+// const user = new User('romashka', '@gmail.com')
+// console.log(user);
+// console.log(user.login);
+// user.login = 'blueberry';
+// console.log(user.login);
+
+// console.log(user.email);
+// user.email = '@hotmail.com';
+// console.log(user.email);
 /*
 ? Напиши клас Blogger для створення об'єкта блогера з наступними властивостями:
 ? - email - пошта, рядок
@@ -56,6 +86,29 @@
 ? - Додай метод updatePostCount(value), який у параметрі value приймає кількість постів, які потрібно додати користувачеві.
  */
 
+
+// class Blogger {
+
+//     constructor(email, age, numberOfPosts, topics) {
+//         this.email = email;
+//         this.age = age;
+//         this.numberOfPosts = numberOfPosts;
+//         this.topics = topics;
+//     }
+
+//     getInfo() {
+//         return `Blogger ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts.`
+//     }
+//     updatePostCount(value) {
+//         return this.numberOfPosts += value;
+//     }
+// }
+
+// const blogger = new Blogger('@gmail.coom', 4, 52, ['car', 'shows']);
+
+// console.log(blogger.getInfo());
+// console.log(blogger.updatePostCount(5));
+
 // Створіть клас Shape, який має властивість color і метод draw.
 //Створіть клас Circle, який наслідується від Shape і має властивість radius
 // та перезаписує метод draw для відображення кола.
@@ -63,6 +116,9 @@
 // const myCircle = new Circle('red', 5);
 // myCircle.draw(); // Drawing a circle with radius 5
 // console.log(myCircle.color); // "red"
+
+
+
 
 //Створіть клас Animal, який має властивість name. 
 // Створіть клас Dog, який наслідується від Animal і має властивість breed. 
