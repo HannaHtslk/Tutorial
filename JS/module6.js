@@ -56,20 +56,20 @@
 // Створіть клас Rectangle, що містить властивості width та height. Додайте метод getArea(), який повертає площу прямокутника.
 // 
 
-class Rectangle {
+// class Rectangle {
 
-  constructor(width, height) {
-   this.width = width;
-    this.height = height;
-  }
+//   constructor(width, height) {
+//    this.width = width;
+//     this.height = height;
+//   }
 
-  // getArea() {
-  //   return this.width * this.height;
-  // }
-  get 
-}
+//   // getArea() {
+//   //   return this.width * this.height;
+//   // }
+//   get 
+// }
 
 
 
-const rectangle1 = new Rectangle(10, 5);
-console.log(rectangle1.getArea()); // 50
+// const rectangle1 = new Rectangle(10, 5);
+// console.log(rectangle1.getArea()); // 50
