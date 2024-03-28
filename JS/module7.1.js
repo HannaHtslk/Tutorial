@@ -48,10 +48,60 @@ document.body.prepend(title);
 
 const nextButton = document.querySelector('.my-button');
 
-const nextButtonHandler = (event) => {
-    console.log(event.type, event.currentTarget);
+// const nextButtonHandler = (event) => {
+//     console.log('you clicked');
+// }
+
+// nextButton.addEventListener('click', nextButtonHandler);
+// // nextButton.removeEventListener('click', nextButtonHandler);
+
+// const handleClick = event => {
+//     console.log(event);
+// }
+
+// nextButton.addEventListener('click', handleClick);
+
+
+// document.addEventListener('keydown', event => {
+//     console.log(event.key);
+//     console.log(event.code);
+// })
+
+// document.addEventListener('keydown', event => {
+//     if ((event.ctrlKey || event.metaKey) && event.code === "KeyS") {
+//         console.log('you pressed Command + S')
+//     }
+// })
+
+// const form = document.querySelector('.form');
+
+// form.addEventListener('submit', event => {
+//     console.dir(event);
+// })
+
+// form.addEventListener('submit', event => {
+//     event.preventDefault()
+// })
+
+const select = document.querySelector('.pizza-select');
+
+const valueOutput = document.querySelector('.value-output');
+
+const textOutput = document.querySelector('.text-output');
+
+function setOutput(event) {
+    const selectedOptionValue = event.currentTarget.value;
+    const selectedOptionIndex = event.currentTarget.selectedIndex;
+    const selectedOptionText =
+        event.currentTarget.options[selectedOptionIndex].text;
 }
 
-nextButton.addEventListener('click', nextButtonHandler);
-// nextButton.removeEventListener('click', nextButtonHandler);
+select.addEventListener('change', setOutput)
+event.currentTarget.options[selectedOptionIndex].text;
+
+textOutput.textContent = selectedOptionText;
+  valueOutput.textContent = selectedOptionValue;
+}
+
+
 
