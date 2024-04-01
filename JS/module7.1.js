@@ -111,38 +111,38 @@
 </li>
 */
 
-const pictures = [
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/0/700/460',
-    alt: 'laptop',
-  },
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/1/700/460',
-    alt: 'developer',
-  },
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/10/700/460',
-    alt: 'forest',
-  },
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/100/700/460',
-    alt: 'beach',
-  },
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/1000/700/460',
-    alt: 'mountain',
-  },
-];
+// const pictures = [
+//   {
+//     width: 700,
+//     height: 460,
+//     url: 'https://picsum.photos/id/0/700/460',
+//     alt: 'laptop',
+//   },
+//   {
+//     width: 700,
+//     height: 460,
+//     url: 'https://picsum.photos/id/1/700/460',
+//     alt: 'developer',
+//   },
+//   {
+//     width: 700,
+//     height: 460,
+//     url: 'https://picsum.photos/id/10/700/460',
+//     alt: 'forest',
+//   },
+//   {
+//     width: 700,
+//     height: 460,
+//     url: 'https://picsum.photos/id/100/700/460',
+//     alt: 'beach',
+//   },
+//   {
+//     width: 700,
+//     height: 460,
+//     url: 'https://picsum.photos/id/1000/700/460',
+//     alt: 'mountain',
+//   },
+// ];
 
 // const createCardTemplate = collection => {
 //   return `
@@ -205,34 +205,153 @@ const pictures = [
 //   console.log(`${title} : ${numberOfCategories}`)
 // })
 
-const images = [
-  {
-    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
-    alt: "White and Black Long Fur Cat",
-  },
-  {
-    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
-    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
-  },
-  {
-    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
-    alt: "Group of Horses Running",
-  },
-];
+// const images = [
+//   {
+//     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+//     alt: "White and Black Long Fur Cat",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Group of Horses Running",
+//   },
+// ];
 
 
-const createCardTemplate = collection => {
-  return `
- <li class="gallery-item">
-    <img src="${collection.url}" alt="${collection.alt}">
-</li>
-  `
-}
+// const createCardTemplate = collection => {
+//   return `
+//  <li class="gallery-item">
+//     <img src="${collection.url}" alt="${collection.alt}">
+// </li>
+//   `
+// }
 
-const cardsArray = images.map(image => {
-  return createCardTemplate(image);
-})
+// const cardsArray = images.map(image => {
+//   return createCardTemplate(image);
+// })
 
-const gallery = document.querySelector('.gallery');
+// const gallery = document.querySelector('.gallery');
 
-gallery.insertAdjacentHTML('beforeend', cardsArray.join(''));
+// gallery.insertAdjacentHTML('beforeend', cardsArray.join(''));
+
+
+// MODULE 7.02
+
+
+/*
+? Натискаючи на кнопку "Click me" змусь
+? червоний квадратик зміщуватись на 50px по діагоналі
+*/
+
+// 1)знайшли елементи, з якими працюватимемо в DOM дереві 
+// const clickBtn = document.querySelector('.js-click');
+// const resetBtn = document.querySelector('.js-reset');
+// const box = document.querySelector('.js-box');
+
+// 2) створюємо іменну колбек функцію, яка буде хендлити нашу подію і в ній прописуємо,
+// що має відбуватись коли користувач буде взаємодіяти з інтерактивним елементом
+// let step = 0;
+
+// const onBtnClick = () => {
+// step += 50;
+//   if (step > 250) {
+//     clickBtn.removeEventListener('click', onBtnClick);
+//     return
+//   }
+//   box.style.transform = `translate(${step}px, ${step}px)`
+// }
+
+// вішаємо слухача на інтерактивні елементи
+// тут в тілі колбекфункції для кнопки "reset" додали знову слухача події для того 
+// щоб код міг виконатися знову і знову 
+// clickBtn.addEventListener('click', onBtnClick);
+
+// resetBtn.addEventListener('click', () => {
+//   step = 0;
+
+//   box.style.transform = `translate(0px, 0px)`;
+//   clickBtn.addEventListener('click', onBtnClick);
+// })
+
+
+/*
+? Виводь в консоль все що користувач вводить в input
+*/
+
+// const input = document.querySelector('.js-user-name');
+
+// const onInputFill = () => {
+//   console.log(input.value);
+// }
+
+// input.addEventListener('input', onInputFill)
+
+/*
+? Користувач вводить в input своє ім'я після втрати
+? фокусу отримує alert з повідомленням-привітанням
+ */
+// const input = document.querySelector('.js-user-name');
+
+// const onInputBlur = () => {
+//   const username = input.value;
+//   alert(`Welcome ${username}`)
+
+// }
+
+// input.addEventListener('blur', onInputBlur)
+
+
+/*
+? Після того, як користувач активує чекбокс, виводиться alert
+*/
+
+// const checkBox = document.querySelector('[type="checkbox"]');
+
+// const onChecked = () => {
+//   if (checkBox.checked) {
+//     alert('checked')
+//     return
+//   }
+// }
+
+// checkBox.addEventListener('change', onChecked)
+
+// const userInput = document.querySelector('#name-input');
+// const userName = document.querySelector('#name-output');
+
+// const onInputFill = () => {
+//   const trimmedInputValue = userInput.value.trim();
+
+//   if (trimmedInputValue === '') {
+//     return userName.textContent = 'Anonymous';
+//   }
+//   return userName.textContent = trimmedInputValue;
+// }
+
+// userInput.addEventListener('input', onInputFill)
+
+// const form = document.querySelector('.login-form');
+
+// const onFormSubmit = event => {
+//   event.preventDefault();
+
+//   const formData = {
+//     [form.elements.email.name]: form.elements.email.value.trim(),
+//     [form.elements.password.name]: form.elements.password.value.trim(),
+//   }
+  
+
+//   if (formData.email === '' || formData.password === '') {
+//     alert('All form fields must be filled in')
+//   }
+
+//   console.log(formData);
+//   form.reset()
+// }
+
+// form.addEventListener('submit', onFormSubmit);
+
+
