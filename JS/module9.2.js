@@ -1,5 +1,8 @@
 const form = document.querySelector('.feedback-form');
 const userData = {};
+const delay = 3000;
+let timerId = null;
+const notification = document.querySelector('.notification')
 
 const formFieldsAutofill = () => {
     try {
@@ -31,18 +34,47 @@ const onInputFill = event => {
     localStorage.setItem('user', JSON.stringify(userData));
 }
 
+
+
+
 const onFormSubmit = event => {
     event.preventDefault();
 
     for (const element of form.elements) {
         if (element.value.trim() === '') {
             return;
-       }
+        }
     }
-
+    
+    
+   
     localStorage.removeItem('user');
-    form.reset('');
+    form.reset();
+
+    showNotification();
+    
 }
+
+const showNotification = () => {
+    
+    notification.classList.add('is-visible');
+    timerId = setTimeout(() => { notificationClose() }, delay);
+}
+
+
+const notificationClose = () => {
+    notification.classList.remove('is-visible');
+}
+
+
+const onNotificationClick = () => {
+    notificationClose();
+    clearTimeout(timerId);
+}
+    
+notification.addEventListener('click', onNotificationClick);
+
+
 
 form.addEventListener('input', onInputFill);
 form.addEventListener('submit', onFormSubmit);

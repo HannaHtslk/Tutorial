@@ -114,6 +114,7 @@ a {
 
 
 .feedback-form {
+    position: relative;
     display: flex;
     padding: 5px;
     flex-direction: column;
@@ -208,4 +209,32 @@ button:hover {
 
 button:active {
     background-color: plum;
+}
+
+.notification {
+    position: absolute;
+    width: 230px;
+    height: 150px;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: rgb(240, 211, 240);
+    color: purple;
+    font-size: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.is-visible {
+    opacity: 1;
+    visibility: visible;
 }
